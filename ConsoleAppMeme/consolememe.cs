@@ -34,19 +34,19 @@ namespace ConsoleAppMeme
                     Console.WriteLine("Offline, check connection");
                 }
                 Console.WriteLine("Another one?");
+                String yesOrNo = Console.ReadLine();
+                if (yesOrNo == "y" || yesOrNo == "yes")
+                {
+                    Console.WriteLine("Which address?");
+                    String addressNew = Console.ReadLine();
+                    Ping(addressNew);
+                }
+                else
+                {
+                    Console.WriteLine("Splendid");
+                }
             }
             Ping(address);
-            String yesOrNo = Console.ReadLine();
-            if(yesOrNo == "y" || yesOrNo == "yes")
-            {
-                Console.WriteLine("Which address?");
-                String addressNew = Console.ReadLine();
-                Ping(addressNew);
-            } else
-            {
-                Console.WriteLine("Splendid");
-            }
-            Ping("meme");
         }
     }
 }
